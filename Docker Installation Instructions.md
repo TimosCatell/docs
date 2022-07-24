@@ -172,8 +172,8 @@ You can see the example [here](https://torplus.videotpdemo.com/wp-content/upload
         -e PP_ENV=prod \
         -e http_address=127.0.0.1:80 \
         -e useNginx=1 \
-        -p 80:80 \
-        -p 28000:28080 \
+        -p 127.0.0.1:80:80 \
+        -p 127.0.0.1:28000:28080 \
         -v ${PWD}/tor:/root/tor \
         -v ${PWD}/ipfs:/root/.ipfs \
         -v ${PWD}/ssl:/etc/ssl/torplus/ \
@@ -249,8 +249,8 @@ You can see the example [here](https://torplus.videotpdemo.com/wp-content/upload
             -e HOST_PORT=80 \
             -e PP_ENV=prod \
             -e http_address=${http_address} \
-            -p 80:80 \
-            -p 28000:28080 \
+            -p 127.0.0.1:80:80 \
+            -p 127.0.0.1:28000:28080 \
             -v ${PWD}/tor:/root/tor \
             -v ${PWD}/ipfs:/root/.ipfs \
             -v ${PWD}/ssl:/etc/ssl/torplus/ \
